@@ -1,0 +1,113 @@
+.pokeSelect{
+    display: grid;
+    column-gap: 60px !important;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 45px 45px;
+    margin: 0 auto;
+    row-gap: 20px;
+    width: 660px;
+    padding: 0px;
+}
+.pokeSelect li{
+    align-items: center;
+    align-self: stretch;
+    background-color: #ac0932;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    font-weight: bold;
+    font-size: 20px;
+    justify-content: center;
+    justify-self: stretch;
+    padding: 3px 8px;
+    position: relative;
+    text-transform: uppercase;
+    filter: grayscale(0.2);
+    transition: 0.2s; 
+}
+
+.pokeSelect.hidde li:hover{
+    filter: grayscale(0);
+    transform: scale(1.10);
+}
+
+
+
+.pokeSelect li .pokeball{
+    height: 20px;
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 10px;
+}
+
+.pokeImg img.hidden{
+    filter :hue-rotate(175deg); 
+}
+
+
+
+/* */
+.pokeBlock{
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.pokeBackground{
+    background-color: #13ad99;
+    z-index: 1;
+}
+
+.pokeBackground img{
+    display: none;
+    position: absolute; 
+    height: 200%;
+    top: -50%;
+    left: 0;
+}
+
+.pokeIU{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+.pokeIU .pokeImg svg{
+    height: 350px;
+}
+
+.pokeImg.hidde svg path{
+    fill: rgb(16, 105, 121);
+}
+
+
+.pokeSelect .active{
+    transform: scale(1.1);
+}
+
+.pokeSelect.show li{
+    filter: grayscale(0.9);
+    cursor: default;
+}
+
+.pokeSelect.show li.yes{
+    background-color: #08bd53;
+}
+.pokeSelect.show li.no{
+    background-color: #da0909;
+}
+.pokeSelect.show li.active{
+    filter: grayscale(0);
+}
+
+
+#loadingPokemonUi{
+    font-size: 90px;
+}
+

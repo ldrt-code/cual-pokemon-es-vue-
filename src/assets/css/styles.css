@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+
+.reload{
+    background-color: white;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    font-size: 40px;
+    right: 20px;
+    padding: 15px;
+    padding-top: 20px;
+    position: absolute;
+    top: 0px;
+    z-index: 10;
+}
+
+.loading{
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
